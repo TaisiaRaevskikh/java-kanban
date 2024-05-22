@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Objects;
 
@@ -5,11 +6,11 @@ public class Epic extends Task {
     private HashMap<Integer, Subtask> subTasks = new HashMap<>();
 
     public Epic(String name, String description) {
-        super(name, description);
+        super(name, description, Status.NEW);
     }
 
-    public HashMap<Integer, Subtask> getSubTasks() {
-        return subTasks;
+    public ArrayList<Subtask> getSubTasks() {
+        return new ArrayList<Subtask>(subTasks.values());
     }
 
     public void addSubtask(Subtask subtask) {
@@ -18,6 +19,10 @@ public class Epic extends Task {
 
     public void deleteSubTaskById(int subTaskId) {
         subTasks.remove(subTaskId);
+    }
+
+    public void deleteAllSubTasks() {
+        subTasks.clear();
     }
 
     @Override

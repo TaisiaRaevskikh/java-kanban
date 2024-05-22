@@ -6,11 +6,10 @@ public class Task {
     private String description;
     private Status status;
 
-    public Task(String name, String description) {
-        this.id = TaskManager.getNextId();
+    public Task(String name, String description, Status status) {
         this.name = name;
         this.description = description;
-        this.status = Status.NEW;
+        this.status = status;
     }
 
     public int getId() {
@@ -31,6 +30,10 @@ public class Task {
 
     public void setStatus(Status status) {
         this.status = status;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public void setName(String name) {
@@ -63,4 +66,5 @@ public class Task {
                 ", status=" + status +
                 "}";
     }
+
 }
