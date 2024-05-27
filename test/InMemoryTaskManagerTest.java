@@ -1,7 +1,12 @@
+import Service.InMemoryTaskManager;
+import TaskModel.Epic;
+import TaskModel.Status;
+import TaskModel.Subtask;
+import TaskModel.Task;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -60,7 +65,7 @@ class InMemoryTaskManagerTest {
 
     @Test
     void checkHistoryHoldPrevious() {
-        ArrayList<Task> history = taskManager.getHistory();
+        List<Task> history = taskManager.getHistory();
         task1.setName("newName");
         Task oldTask = history.getFirst();
         assertNotEquals(task1, oldTask);

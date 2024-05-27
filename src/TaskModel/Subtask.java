@@ -1,3 +1,5 @@
+package TaskModel;
+
 import java.util.Objects;
 
 public class Subtask extends Task {
@@ -29,7 +31,7 @@ public class Subtask extends Task {
 
     @Override
     public String toString() {
-        return "Subtask{" +
+        return "TaskModel.Subtask{" +
                 "epicId =" + epicId +
         "} " + super.toString();
     }

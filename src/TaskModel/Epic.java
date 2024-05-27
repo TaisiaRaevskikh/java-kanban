@@ -1,3 +1,5 @@
+package TaskModel;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Objects;
@@ -41,7 +43,7 @@ public class Epic extends Task {
 
     @Override
     public String toString() {
-        return "Epic{" +
+        return "TaskModel.Epic{" +
                 "subtasks=" + subTasks +
                 "} " + super.toString();
     }
